@@ -1,0 +1,22 @@
+produto = input("Digite o nome do produto: ")
+slogan = input("Digite o slogan: ")
+palavra_chave = input("Digite a palavra-chave: ")
+
+if palavra_chave in slogan:
+    print("Slogan adequado (palavra-chave está no slogan).")
+else:
+    print("Slogan inadequado (palavra-chave não está no slogan).")
+
+num_palavras = len(slogan.split())
+if 7 <= num_palavras <= 10:
+    print("Slogan adequado (número de palavras).")
+else:
+    print("Slogan inadequado (número de palavras).")
+
+if slogan[0].isalpha() and slogan[-1].isalpha():
+    print("Slogan adequado (início/fim com letra).")
+else:
+    print("Slogan inadequado (início/fim com letra).")
+
+if palavra_chave in slogan and 7 <= num_palavras <= 10 and slogan[0].isalpha() and slogan[-1].isalpha():
+    print(f'O slogan "{slogan}" cumpre os requisitos para o produto "{produto}".')

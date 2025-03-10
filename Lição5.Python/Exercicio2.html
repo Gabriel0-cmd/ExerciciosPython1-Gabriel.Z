@@ -1,0 +1,10 @@
+def eh_triangulo(a, b, c):
+    return a + b > c and a + c > b and b + c > a
+
+
+lado1 = float(input("Digite o primeiro lado do triângulo: "))
+lado2 = float(input("Digite o segundo lado do triângulo: "))
+lado3 = float(input("Digite o terceiro lado do triângulo: "))
+
+
+print(eh_triangulo(lado1, lado2, lado3))

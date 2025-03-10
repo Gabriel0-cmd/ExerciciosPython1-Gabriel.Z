@@ -1,0 +1,12 @@
+def verificar_login(usuario, senha):
+    return usuario == "admin" and senha == "1234"
+
+
+usuario = input("Digite o login: ")
+senha = input("Digite a senha: ")
+
+
+if verificar_login(usuario, senha):
+    print("Acesso Permitido")
+else:
+    print("Acesso Negado")

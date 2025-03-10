@@ -1,0 +1,19 @@
+def classificar_idade(valor):
+    if isinstance(valor, int) and valor >= 0:
+        if valor < 18:
+            return "Você é menor de idade."
+        elif 18 <= valor <= 59:
+            return "Você é adulto."
+        else:
+            return "Você é idoso."
+    else:
+        return "Valor informado é inválido"
+
+# Solicitando entrada do usuário
+entrada = input("Digite sua idade: ")
+
+try:
+    idade = int(entrada)  # Tentativa de conversão para inteiro
+    print(classificar_idade(idade))
+except ValueError:
+    print("Valor informado é inválido")

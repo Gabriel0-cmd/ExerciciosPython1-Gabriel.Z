@@ -1,0 +1,14 @@
+def verificar_paridade(valor):
+    if isinstance(valor, int):  # Verifica se o valor é um número inteiro
+        return valor % 2 == 0
+    else:
+        return "Valor informado é inválido"
+
+# Solicitando entrada do usuário
+entrada = input("Digite um número inteiro: ")
+
+try:
+    numero = int(entrada)  # Tentativa de conversão para inteiro
+    print(verificar_paridade(numero))
+except ValueError:
+    print("Valor informado é inválido")

@@ -1,0 +1,18 @@
+def tipo_triangulo(a, b, c):
+    if a + b > c and a + c > b and b + c > a:
+        if a == b == c:
+            return "Triângulo Equilátero"
+        elif a == b or a == c or b == c:
+            return "Triângulo Isósceles"
+        else:
+            return "Triângulo Escaleno"
+    else:
+        return "Os valores informados não formam um triângulo."
+
+
+lado1 = float(input("Digite o primeiro lado do triângulo: "))
+lado2 = float(input("Digite o segundo lado do triângulo: "))
+lado3 = float(input("Digite o terceiro lado do triângulo: "))
+
+
+print(tipo_triangulo(lado1, lado2, lado3))

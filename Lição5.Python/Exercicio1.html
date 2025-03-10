@@ -1,0 +1,30 @@
+import rea
+
+def obter_estado_do_cpf(cpf):
+    estados = {
+        '0': "Rio Grande do Sul",
+        '1': "Distrito Federal, Goiás, Mato Grosso, Mato Grosso do Sul e Tocantins",
+        '2': "Amazonas, Pará, Roraima, Amapá, Acre e Rondônia",
+        '3': "Ceará, Maranhão e Piauí",
+        '4': "Paraíba, Pernambuco, Alagoas e Rio Grande do Norte",
+        '5': "Bahia e Sergipe",
+        '6': "Minas Gerais",
+        '7': "Rio de Janeiro e Espírito Santo",
+        '8': "São Paulo",
+        '9': "Paraná e Santa Catarina"
+    }
+    return estados.get(cpf[8], "Estado desconhecido")
+
+def validar_e_obter_estado(cpf):
+    cpf = re.sub(r'\D', '', cpf) 
+    
+    if len(cpf) != 11:
+        return "CPF INVÁLIDO"
+    
+    estado = obter_estado_do_cpf(cpf)
+    return f"O CPF informado pertence ao estado: {estado}"
+
+
+cpf_input = input("Digite o CPF: ")
+resultado = validar_e_obter_estado(cpf_input)
+print(resultado)
